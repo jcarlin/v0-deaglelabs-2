@@ -17,7 +17,7 @@ const robotoMono = Roboto_Mono({
 })
 
 export const metadata: Metadata = {
-  title: "DeagleLabs",
+  title: "DEAGLE AI | by DEAGLE LABS",
   description: "Secure, offline AI solution for legal professionals",
   generator: "v0.dev",
 }
@@ -39,10 +39,10 @@ export default function RootLayout({
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "SoftwareApplication",
-            "name": "DeagleLabs",
+            "name": "DEAGLE AI",
             "applicationCategory": "LegalSoftware",
             "operatingSystem": "All",
-            "description": "DeagleLabs offers a secure, offline AI solution for legal professionals, enhancing case research and strategy with cutting-edge technology."
+            "description": "DEAGLE AI by DEAGLE LABS offers a secure, offline AI solution for legal professionals, enhancing case research and strategy with cutting-edge technology."
           })}
         </script>
       </head>

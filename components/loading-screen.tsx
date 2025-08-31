@@ -4,10 +4,10 @@ import { useEffect, useState } from "react"
 import { DeagleLabsLogo } from "./deaglelabs-logo"
 
 const messages = [
-  "DeagleLabs System Boot Initiated...",
+  "DEAGLE AI System Boot Initiated...",
   "Verifying offline security protocols...",
   "Engaging document intelligence modules...",
-  "Initializing Deagle AI...",
+  "Initializing DEAGLE AI Core...",
   "Case strategy systems: Operational",
   "System status: Loading...",
 ]

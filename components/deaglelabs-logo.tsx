@@ -4,10 +4,13 @@ export function DeagleLabsLogo({ className = "" }: { className?: string }) {
       <div className="flex items-center justify-center">
         <span className="text-4xl md:text-5xl text-[#D4AF37] mr-3">DEAGLE</span>
         <span className="text-4xl md:text-5xl text-[#606060] flex items-center">
-          LABS
+          AI
         </span>
       </div>
-      <div className="text-[#CCCCCC] text-sm md:text-base mt-3 tracking-widest font-light">
+      <div className="text-[#999999] text-xs md:text-sm mt-1 tracking-wider font-normal">
+        by DEAGLE LABS
+      </div>
+      <div className="text-[#CCCCCC] text-sm md:text-base mt-2 tracking-widest font-light">
         SECURE. OFFLINE. INTELLIGENCE.
       </div>
     </div>
