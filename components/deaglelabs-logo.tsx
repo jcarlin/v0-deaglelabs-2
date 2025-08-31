@@ -8,7 +8,7 @@ export function DeagleLabsLogo({ className = "" }: { className?: string }) {
         </span>
       </div>
       <div className="text-[#CCCCCC] text-sm md:text-base mt-3 tracking-widest font-light">
-        Offline. Intelligent. Yours.
+        SECURE. OFFLINE. INTELLIGENCE.
       </div>
     </div>
   )

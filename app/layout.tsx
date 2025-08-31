@@ -1,5 +1,4 @@
 import { Orbitron, Roboto_Mono } from "next/font/google"
-import localFont from "next/font/local"
 import type React from "react"
 import type { Metadata } from "next"
 import "./globals.css"
@@ -16,18 +15,6 @@ const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono",
 })
 
-// Load SF Mono as a local font
-const sfMono = localFont({
-  src: [
-    {
-      path: "../public/fonts/SFMono-Regular.woff2",
-      weight: "400",
-      style: "normal",
-    },
-  ],
-  variable: "--font-sf-mono",
-})
-
 export const metadata: Metadata = {
   title: "v0 App",
   description: "Created with v0",
@@ -40,7 +27,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${orbitron.variable} ${robotoMono.variable} ${sfMono.variable}`}>
+    <html lang="en" className={`${orbitron.variable} ${robotoMono.variable}`}>
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -55,17 +42,6 @@ export default function RootLayout({
             'description": "DeagleLabs offers a secure, offline AI solution for legal professionals, enhancing case research and strategy with cutting-edge technology.')
           }
         </script>
-        <style>
-          {`
-            @font-face {
-              font-family: 'SF Mono';
-              src: url('/fonts/SFMono-Regular.woff2') format('woff2');
-              font-weight: 400;
-              font-style: normal;
-              font-display: swap;
-            }
-          `}
-        </style>
       </head>
       <body>
         {children}

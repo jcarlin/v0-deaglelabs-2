@@ -7,9 +7,9 @@ const messages = [
   "DeagleLabs System Boot Initiated...",
   "Verifying offline security protocols...",
   "Engaging document intelligence modules...",
-  "Initializing decentralized AI core...",
+  "Initializing Deagle AI...",
   "Case strategy systems: Operational",
-  "System status: Ready.",
+  "System status: Loading...",
 ]
 
 export default function LoadingScreen() {
