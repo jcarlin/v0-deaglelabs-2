@@ -9,7 +9,7 @@ const messages = [
   "Engaging document intelligence modules...",
   "Initializing DEAGLE AI Core...",
   "Case strategy systems: Operational",
-  "System status: Loading...",
+  "System status: Loading",
 ]
 
 export default function LoadingScreen() {
@@ -17,6 +17,7 @@ export default function LoadingScreen() {
   const [currentText, setCurrentText] = useState("")
   const [isComplete, setIsComplete] = useState(false)
   const [showCursor, setShowCursor] = useState(true)
+  const [loadingDots, setLoadingDots] = useState("")
 
   useEffect(() => {
     // Handle typewriter effect for current message
@@ -26,7 +27,7 @@ export default function LoadingScreen() {
       if (currentText.length < currentMessage.length) {
         const timeout = setTimeout(() => {
           setCurrentText(currentMessage.substring(0, currentText.length + 1))
-        }, 50) // Speed of typing
+        }, 25) // Speed of typing (doubled speed)
 
         return () => clearTimeout(timeout)
       } else {
@@ -34,7 +35,7 @@ export default function LoadingScreen() {
         const timeout = setTimeout(() => {
           setDisplayedTextIndex(displayedTextIndex + 1)
           setCurrentText("")
-        }, 800) // Delay between messages
+        }, 400) // Delay between messages (doubled speed)
 
         return () => clearTimeout(timeout)
       }
@@ -54,6 +55,20 @@ export default function LoadingScreen() {
     }
   }, [isComplete])
 
+  // Animated dots for loading message
+  useEffect(() => {
+    if (isComplete) {
+      const dotsInterval = setInterval(() => {
+        setLoadingDots((prev) => {
+          if (prev.length >= 3) return ""
+          return prev + "."
+        })
+      }, 500) // Dots animation speed
+
+      return () => clearInterval(dotsInterval)
+    }
+  }, [isComplete])
+
   return (
     <div className="flex flex-col items-center justify-center w-full h-screen bg-black p-4">
       <div className="mb-12">
@@ -63,7 +78,12 @@ export default function LoadingScreen() {
       <div className="font-sf-mono max-w-lg w-full">
         {messages.slice(0, displayedTextIndex).map((message, index) => (
           <div key={index} className="mb-4">
-            <span className="text-[#CCCCCC] text-lg sm:text-xl">{message}</span>
+            <span className="text-[#CCCCCC] text-lg sm:text-xl">
+              {message}
+              {index === messages.length - 1 && isComplete && (
+                <span className="inline-block w-12">{loadingDots}</span>
+              )}
+            </span>
           </div>
         ))}
 
