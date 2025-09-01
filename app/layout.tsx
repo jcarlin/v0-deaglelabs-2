@@ -31,6 +31,11 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
 }
 
 export default function RootLayout({
@@ -44,9 +49,9 @@ export default function RootLayout({
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="google-site-verification" content="WXMltUMqMyoU99yCkjTvcpAP0sO5DVhQHg-km8DlpPM" />
-        {/* <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> */}
-        {/* <link rel="alternate icon" href="/favicon.ico" /> */}
-        <link rel="icon" href="/favicon.ico"/>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico?v=2"/>
+        <link rel="shortcut icon" href="/favicon.ico?v=2"/>
+        <link rel="apple-touch-icon" href="/favicon.ico?v=2"/>
         <link rel="manifest" href="/manifest.json" />
         <script type="application/ld+json">
           {JSON.stringify({
