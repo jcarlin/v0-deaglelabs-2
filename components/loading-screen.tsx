@@ -4,9 +4,9 @@ import { useEffect, useState } from "react"
 import { DeagleLabsLogo } from "./deaglelabs-logo"
 
 const messages = [
-  "DEAGLE AI Systems Initializing",
-  "Validating secure offline environment",
-  "Activating document intelligence systems",
+  "DEAGLE AI Systems Initializing.",
+  "Validating secure offline environment.",
+  "Activating document intelligence systems.",
   "DeagleAI under active development",
 ]
 
@@ -17,6 +17,7 @@ export default function LoadingScreen() {
   const [showCursor, setShowCursor] = useState(true)
   const [loadingDots, setLoadingDots] = useState("")
   const [showFinalStatus, setShowFinalStatus] = useState(false)
+  const [showFinalPeriod, setShowFinalPeriod] = useState(false)
 
   useEffect(() => {
     // Handle typewriter effect for current message
@@ -73,6 +74,7 @@ export default function LoadingScreen() {
     if (isComplete) {
       const finalStatusTimeout = setTimeout(() => {
         setShowFinalStatus(true)
+        setShowFinalPeriod(true)
         setLoadingDots("") // Clear dots when showing final status
       }, 3000)
 
@@ -92,6 +94,7 @@ export default function LoadingScreen() {
             <div key={index} className="mb-2 break-words">
               <span className="text-[#CCCCCC] text-sm sm:text-base md:text-lg font-mono">
                 {'> '}{message}
+                {index === messages.length - 1 && showFinalPeriod && '.'}
                 {index === messages.length - 1 && isComplete && !showFinalStatus && (
                   <span className="inline-block">{loadingDots}</span>
                 )}
