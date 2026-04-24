@@ -1,30 +1,57 @@
-# deaglelabs 
+# deaglelabs.com
 
-*Automatically synced with your [v0.app](https://v0.app) deployments*
+Marketing site for Deagle Labs.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/julian-codedeliveres-projects/v0-deaglelabs)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/Xlb6WQuDyem)
+## Stack
 
-## Overview
+Pure static HTML / CSS / JS. No build step, no framework.
 
-This repository will stay in sync with your deployed chats on [v0.app](https://v0.app).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.app](https://v0.app).
+## Local preview
 
-## Deployment
+Open `index.html` in a browser. Or:
 
-Your project is live at:
+```sh
+python3 -m http.server 8080
+# then visit http://localhost:8080
+```
 
-**[https://vercel.com/julian-codedeliveres-projects/v0-deaglelabs](https://vercel.com/julian-codedeliveres-projects/v0-deaglelabs)**
+## Deploy (Vercel)
 
-## Build your app
+1. Push this repo to GitHub.
+2. In Vercel: **New Project** → import the repo.
+3. Framework Preset: **Other**
+4. Build Command: *(leave empty)*
+5. Output Directory: `.` *(or leave empty)*
+6. Deploy.
+7. Add your custom domain (`deaglelabs.com`) under **Project Settings → Domains** and follow the DNS instructions.
 
-Continue building your app on:
+That's it — Vercel will serve the static files directly.
 
-**[https://v0.app/chat/projects/Xlb6WQuDyem](https://v0.app/chat/projects/Xlb6WQuDyem)**
+## Files
 
-## How It Works
+| File | Purpose |
+|---|---|
+| `index.html` | Single-page marketing site |
+| `styles.css` | All styles |
+| `demo.js` | Interactive "Let me Deagle that" widget |
+| `site.js` | Reveal-on-scroll, mobile menu, FAQ, demo modal |
+| `favicon.svg` / `favicon.png` | Brand mark |
 
-1. Create and modify your project using [v0.app](https://v0.app)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+## Brand
+
+- Type: Geist + Geist Mono (Google Fonts)
+- Primary: `#5C9CFF` electric blue (CTAs)
+- Warm accent: `#F26B5C` coral (moments of yes)
+- Surface: `#0A0A09` void
+- Cream pricing surface: `#F2EFE7`
+
+## Demo form
+
+The "Book a Demo" form currently fakes a success state. To wire it to Formspree:
+
+1. Get a form ID from formspree.io
+2. In `site.js`, replace the `form.addEventListener('submit', ...)` body with a `fetch` to `https://formspree.io/f/YOUR_ID`.
+
+## License
+
+© 2026 Deagle Labs. All rights reserved.
