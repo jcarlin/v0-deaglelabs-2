@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-label="Deagle Labs">
-  <rect width="32" height="32" rx="6" fill="#0A0A09"></rect>
-  
-  <rect x="4" y="11" width="24" height="11" fill="#F2F2EE"></rect>
-  
-  <path d="M 28 11 L 21 11 C 18 11 16 13 16 16.5 C 16 20 18 22 21 22 L 28 22 Z" fill="#0A0A09"></path>
-  
-  <circle cx="20.5" cy="16.5" r="1.4" fill="#F26B5C"></circle>
-</svg>
