@@ -361,18 +361,11 @@ section + section { border-top: 1px solid var(--b1); }
   gap: 32px;
 }
 
-.hero h1 .cut {
-  background: linear-gradient(105deg, var(--text) 0%, var(--text) 49%, var(--blue) 50%, var(--blue) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  position: relative;
-  display: inline-block;
-}
 .hero h1 .verb {
   font-style: italic;
   font-family: var(--display);
   font-weight: 500;
+  color: var(--blue);
 }
 
 .hero-sub {
@@ -1393,14 +1386,10 @@ html[data-warm="coral"] {
   --warm-on: #1F0805;
 }
 
-/* "Deagle that" verb — paints warm when active, blue otherwise.
-   We override the color of the gradient .cut span in warm modes. */
-html[data-warm="amber"] .hero h1 .cut,
-html[data-warm="coral"] .hero h1 .cut {
-  background: linear-gradient(105deg, var(--text) 0%, var(--text) 49%, var(--warm) 50%, var(--warm) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+/* "Deagle" verb — coral in coral mode, amber in amber mode, blue by default. */
+html[data-warm="amber"] .hero h1 .verb,
+html[data-warm="coral"] .hero h1 .verb {
+  color: var(--warm);
 }
 
 /* Verified pills + agent trace done-checks turn warm */

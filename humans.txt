@@ -1,0 +1,7 @@
+/* TEAM */
+  Brand: Deagle Labs
+  Site: https://deaglelabs.com
+  Built: 2026
+  Stack: HTML · CSS · vanilla JS — no build step
+  Fonts: Geist (Vercel)
+  Hosting: Vercel
