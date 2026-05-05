@@ -4,7 +4,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Deagle — Legal AI for Litigators | Privilege-Safe, From $49/seat</title>
-<meta name="description" content="Privilege-safe legal AI for solo, small, and mid-size firms. Six autonomous agents. Verified citations under 1% hallucination. Cloud, BYOC, or fully air-gapped. From $49/seat." />
+<meta name="description" content="Privilege-safe legal AI for solo, small, and mid-size firms. Six autonomous agents. Verified citations. Cloud, BYOC, or fully air-gapped. From $49/seat." />
 <meta name="keywords" content="legal AI, legal tech, litigation AI, privilege-safe AI, BYOC legal AI, air-gapped legal AI, Harvey AI alternative, CoCounsel alternative, Lexis+ AI alternative, attorney-client privilege, post-Heppner, citation verification, hallucination, document review, deposition prep, F.R.C.P." />
 <meta name="author" content="Deagle Labs" />
 <meta name="theme-color" content="#0A0A09" />
@@ -77,7 +77,7 @@
   "applicationCategory": "BusinessApplication",
   "applicationSubCategory": "LegalSoftware",
   "operatingSystem": "Web, Linux (BYOC), Air-gapped",
-  "description": "Privilege-safe legal AI platform. Six autonomous agents — Reader, Gatekeeper, Cite-Checker, Pen, Skeptic, Cross — orchestrate document review, citation verification, deposition prep, and motion drafting. Hallucination rate under 1% via Chain-of-Verification.",
+  "description": "Privilege-safe legal AI platform. Six autonomous agents — Reader, Gatekeeper, Cite-Checker, Pen, Skeptic, Cross — orchestrate document review, citation verification, deposition prep, and motion drafting via Chain-of-Verification.",
   "url": "https://deaglelabs.com/",
   "image": "https://deaglelabs.com/og.png",
   "publisher": { "@type": "Organization", "name": "Deagle Labs" },
@@ -158,10 +158,10 @@
     },
     {
       "@type": "Question",
-      "name": "What is Deagle's hallucination rate?",
+      "name": "How does Deagle minimize hallucination?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Under 1% on the Stanford HAI Magesh et al. 202-question legal benchmark — verified by independent re-test. Every citation is re-fetched and pin-cite-matched via Chain-of-Verification (CoVe) before delivery to the user. Compare to Lexis+ AI at 17% and Westlaw Precision at 33% in the original Stanford study."
+        "text": "Every citation is re-fetched and pin-cite-matched via Chain-of-Verification (CoVe) before delivery to the user. If a citation can't be verified, the agent refuses rather than guesses."
       }
     },
     {
@@ -169,7 +169,7 @@
       "name": "How does Deagle compare to Harvey AI, CoCounsel, and Lexis+ AI?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Deagle starts at $49/seat with no minimum, versus Harvey at ~$100/seat with a 20-seat minimum, CoCounsel at $225/user, and Lexis+ AI at quote-only pricing. Deagle is the only platform of the four that offers fully air-gapped deployment and customer-managed Helm/K8s BYOC. Hallucination rate is also materially lower per the Stanford HAI benchmark."
+        "text": "Deagle starts at $49/seat with no minimum, versus Harvey at ~$100/seat with a 20-seat minimum, CoCounsel at $225/user, and Lexis+ AI at quote-only pricing. Deagle is the only platform of the four that offers fully air-gapped deployment and customer-managed Helm/K8s BYOC."
       }
     },
     {
@@ -301,10 +301,6 @@
         <span class="v">$49<span class="unit">/mo</span></span>
       </div>
       <div class="item">
-        <span class="k">Hallucination rate</span>
-        <span class="v" style="color:var(--green)">&lt;1.0<span class="unit">%·CoVe</span></span>
-      </div>
-      <div class="item">
         <span class="k">Deployment</span>
         <span class="v">Cloud · BYOC · Air-gap</span>
       </div>
@@ -316,28 +312,13 @@
   </div>
 </section>
 
-<!-- =================== PROOF BAR =================== -->
-<section class="proof-bar" style="padding:32px 0">
-  <div class="wrap row">
-    <span class="label rv">In production at</span>
-    <div class="firms">
-      <span class="firm rv d1 serif">Holloway &amp; Voss LLP</span>
-      <span class="firm rv d2">PRESSER<span class="amp">·</span>KAPLAN</span>
-      <span class="firm rv d3 boxed">MERIDIAN&nbsp;LITIGATION</span>
-      <span class="firm rv d4 serif">Okafor Law Group</span>
-      <span class="firm rv d5">SUTRO<span class="amp">/</span>WEN</span>
-      <span class="firm rv d6 serif">Bartlett, Reyes &amp; Park</span>
-    </div>
-  </div>
-</section>
-
 <!-- =================== PILLARS =================== -->
 <section id="product">
   <div class="wrap">
     <div class="section-head rv">
       <span class="eyebrow"><span class="num">01</span> / INTELLIGENCE</span>
       <h2>Four reasons litigators are<br/>switching every quarter.</h2>
-      <p class="lead">The legacy stack costs more than your associates and still hallucinates 17–33% of the time. The consumer stack waives privilege the moment you paste a document. We fixed both.</p>
+      <p class="lead">The legacy stack costs more than your associates and still hallucinates. The consumer stack waives privilege the moment you paste a document. We fixed both.</p>
     </div>
 
     <div class="pillars-grid rv d1">
@@ -364,10 +345,10 @@
       <div class="pillar">
         <span class="num">PILLAR · 03</span>
         <h3>Verified accuracy.</h3>
-        <p>Stanford HAI clocked Westlaw Precision at 33% and Lexis+ AI at 17% hallucination. Deagle ships Chain-of-Verification (CoVe): every citation is fetched, parsed, and matched before it reaches you.</p>
+        <p>Legacy legal AI tools hallucinate at rates documented by Stanford HAI. Deagle ships Chain-of-Verification (CoVe): every citation is fetched, parsed, and matched before it reaches you.</p>
         <div class="stat">
-          <span class="big">&lt;1%</span>
-          <span class="lbl">CoVe-verified hallucination</span>
+          <span class="big">CoVe</span>
+          <span class="lbl">Verified citations</span>
         </div>
       </div>
 
@@ -664,13 +645,6 @@
             <td>Firm-wide</td>
           </tr>
           <tr>
-            <td class="lbl">Hallucination rate (HAI)</td>
-            <td class="us good">&lt; 1.0% <span class="text-dim mono" style="font-size:11px">·CoVe</span></td>
-            <td class="text-dim">N/A</td>
-            <td class="text-dim">N/A</td>
-            <td class="bad">17%</td>
-          </tr>
-          <tr>
             <td class="lbl">Air-gapped deployment</td>
             <td class="us"><span class="check">✓</span> VaultAI</td>
             <td><span class="x">✗</span></td>
@@ -722,7 +696,7 @@
         </tbody>
       </table>
       <div class="compare-foot">
-        Sources: stanford.edu/hai · vendor pricing pages · last verified 04.2026. Hallucination rate measured under CoVe verification on the Magesh et al. 202-question benchmark.
+        Sources: stanford.edu/hai · vendor pricing pages · last verified 04.2026.
       </div>
     </div>
   </div>
@@ -814,8 +788,8 @@
       </div>
 
       <div class="faq-item">
-        <button class="faq-q">How do you keep hallucination under 1%? <span class="icon"></span></button>
-        <div class="faq-a">Chain-of-Verification (CoVe). Every citation produced by the Draft agent is re-fetched by the Verify agent from the actual reporter, parsed, and pin-cite-matched against the claim. If verification fails, the agent refuses rather than guesses. Stanford HAI's published benchmark put us at 0.7% on Magesh et al.'s 202 questions.</div>
+        <button class="faq-q">How do you minimize hallucination? <span class="icon"></span></button>
+        <div class="faq-a">Chain-of-Verification (CoVe). Every citation produced by the Draft agent is re-fetched by the Verify agent from the actual reporter, parsed, and pin-cite-matched against the claim. If verification fails, the agent refuses rather than guesses.</div>
       </div>
 
       <div class="faq-item">
@@ -899,30 +873,6 @@
           <span>Deagle<span class="lab">&nbsp;Labs</span></span>
         </a>
         <p>Litigation-grade AI for the firms the legacy stack forgot. Privilege-safe, citation-verified, and priced like we want you to use it.</p>
-      </div>
-      <div class="foot-col">
-        <h5>Product</h5>
-        <a href="#product">Pillars</a>
-        <a href="#agents">Agents</a>
-        <a href="#architecture">Architecture</a>
-        <a href="#deploy">Deployment</a>
-        <a href="#pricing">Pricing</a>
-      </div>
-      <div class="foot-col">
-        <h5>Company</h5>
-        <a href="#">Founders</a>
-        <a href="#">Customers</a>
-        <a href="#">Engineering blog</a>
-        <a href="#">Heppner brief</a>
-        <a href="#">Press</a>
-      </div>
-      <div class="foot-col">
-        <h5>Trust</h5>
-        <a href="#">SOC 2 Type II</a>
-        <a href="#">DPA</a>
-        <a href="#">Sub-processors</a>
-        <a href="#">Security</a>
-        <a href="#">Status</a>
       </div>
     </div>
     <div class="foot-bottom">
