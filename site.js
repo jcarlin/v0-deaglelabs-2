@@ -47,7 +47,7 @@
   }
 
   // --- Demo modal ---
-  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/REPLACE_WITH_FORM_ID';
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xaqvdpkp';
 
   const modal = document.getElementById('demo-modal');
   const modalClose = document.getElementById('demo-modal-close');
