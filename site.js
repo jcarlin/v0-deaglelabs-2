@@ -47,11 +47,14 @@
   }
 
   // --- Demo modal ---
+  const FORMSPREE_ENDPOINT = 'https://formspree.io/f/xaqvdpkp';
+
   const modal = document.getElementById('demo-modal');
   const modalClose = document.getElementById('demo-modal-close');
   const openTriggers = document.querySelectorAll('a[href="#demo"], #open-demo-form');
   const form = document.getElementById('demo-form');
   const ok = document.getElementById('demo-form-ok');
+  const err = document.getElementById('demo-form-err');
 
   function openModal(e) {
     if (e) e.preventDefault();
@@ -72,17 +75,41 @@
   document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 
   if (form) {
-    form.addEventListener('submit', (e) => {
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const submitLabel = submitBtn ? submitBtn.textContent : '';
+
+    form.addEventListener('submit', async (e) => {
       e.preventDefault();
-      // Validate
+      if (err) err.hidden = true;
+
       if (!form.name.value.trim() || !form.email.value.trim() || !form.firm.value.trim()) {
         form.querySelectorAll('input[required]').forEach(i => {
           if (!i.value.trim()) i.style.borderColor = 'var(--red)';
         });
         return;
       }
-      form.hidden = true;
-      if (ok) ok.hidden = false;
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Sending…';
+      }
+
+      try {
+        const res = await fetch(FORMSPREE_ENDPOINT, {
+          method: 'POST',
+          headers: { Accept: 'application/json' },
+          body: new FormData(form),
+        });
+        if (!res.ok) throw new Error('Formspree responded ' + res.status);
+        form.hidden = true;
+        if (ok) ok.hidden = false;
+      } catch (_) {
+        if (err) err.hidden = false;
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.textContent = submitLabel;
+        }
+      }
     });
   }
 })();
