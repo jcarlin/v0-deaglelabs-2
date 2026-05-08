@@ -230,14 +230,6 @@ section + section { border-top: 1px solid var(--b1); }
   gap: 12px;
 }
 
-.signin {
-  font-size: 13.5px;
-  color: var(--muted);
-  white-space: nowrap;
-  transition: color 0.18s ease;
-}
-.signin:hover { color: var(--text); }
-
 .hamburger {
   display: none;
   background: transparent;
@@ -259,7 +251,7 @@ section + section { border-top: 1px solid var(--b1); }
   .nav-cta .btn-secondary { display: none; }
 }
 @media (max-width: 920px) {
-  .nav-links, .nav-cta .signin, .nav-cta .btn-secondary { display: none; }
+  .nav-links, .nav-cta .btn-secondary { display: none; }
   .hamburger { display: inline-flex; }
 }
 
